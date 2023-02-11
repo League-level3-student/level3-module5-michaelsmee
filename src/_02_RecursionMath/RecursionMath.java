@@ -19,13 +19,13 @@ public class RecursionMath {
     // Hint: if numberToDivideBy is bigger than number,
     //       you can't divide anymore
     public static int recursiveDivision(int number, int numberToDivideBy) {
-    	int num = numberToDivideBy;
-        if(numberToDivideBy == number/numberToDivideBy) {
-        	return number;
-        }
-        else {
-        	return recursiveDivision(number-1, numberToDivideBy); 
-        }
+    	if(number < numberToDivideBy) {
+    		return number;
+    	}
+    	else {
+    		return 1+ recursiveDivision(number-numberToDivideBy, numberToDivideBy);
+    	}
+       
         //return 0;
     }
 
